@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body>
+  <div class="w-full ">
+    <div class="max-w-7xl w-full mb-8 mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="w-full mb-8 mx-auto px-6 py-4 bg-[#F6F8FB]">
+    <!-- Header -->
+    <header class="flex flex-wrap justify-between items-center py-4">
+      <!-- Logo -->
+      <img src="/asset/Logo (1).svg" alt="Header Logo" class="h-8" />
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Navigation -->
+      <nav id="menu" class="hidden md:flex md:space-x-6 w-full md:w-auto flex-col md:flex-row items-center mt-4 md:mt-0">
+        <a href="/index.html" class="text-gray-700 hover:text-blue-500">Home</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500 flex items-center gap-1">About</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500 flex items-center gap-1">Services</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Portfolio</a>
+        <a href="#" class="text-gray-700 hover:text-blue-500">Blog</a>
+        <a href="/index.html" class="text-gray-700 hover:text-blue-500">Contact</a>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="flex gap-3 sm:gap-5 mt-4 md:mt-0">
+        <a href="#"><img src="/asset/Vector.png" alt="Twitter" class="h-5 sm:h-6"/></a>
+        <a href="#"><img src="/asset/instagram.png" alt="Instagram" class="h-6 sm:h-7"/></a>
+        <a href="#"><img src="/asset/facebook.png" alt="Facebook" class="h-6 sm:h-7"/></a>
+      </div>
+    </header>
+  </div>
+</div>
+
+      <!--Contact Us page-->
+      <div class="flex flex-col items-start justify-start pb-6 mt-8 px-4 sm:px-8 md:px-16 bg-white">
+        <h1 class="text-3xl sm:text-4xl text-gray-700 text-start mb-8 sm:mb-16">_____ Contact Us</h1>
+      
+        <ul class="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-6 sm:gap-12 lg:gap-20">
+          <li class="flex items-center gap-2">
+            <img src="/asset/Group 34 (1).png" class="w-8 sm:w-10 h-8 sm:h-10" />
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Address</h1>
+              <p class="text-sm sm:text-base">Jaipur, Rajasthan, INDIA<br>Pin 342087</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="/asset/Group 33.png" class="w-8 sm:w-10 h-8 sm:h-10" />
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Call Us</h1>
+              <p class="text-sm sm:text-base">+91 9876543210</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="/asset/Group 351.png" class="w-8 sm:w-10 h-8 sm:h-10" />
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Email Us</h1>
+              <p class="text-sm sm:text-base">info@test.com</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!--Tailwind form -->
+      <div class="bg-gray-100 flex flex-col p-8 items-center justify-center min-h-screen">
+        <h2 class="text-2xl font-bold text-center mb-8">Get in touch with us.</h2>
+        <p class="= text-2xl font-bold text-center  mb-8">We're here to assist you.</p>
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+          <form id="contactForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Full Name -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Full Name</label>
+                <input type="text" id="fullName"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" placeholder="Ram Kumar Sharma">
+                  <span class="text-red-500 text-sm hidden" id="nameError">Full Name is required</span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Email Address</label>
+                <input type="email" id="email"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" >
+                  <span class="text-red-500 text-sm hidden" id="emailError">Valid email required</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Phone Number</label>
+                <input type="text" id="phone"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="phoneError">Valid phone required</span>
+              </div>
+
+              <!-- Date of Birth -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Date of Birth</label>
+                <input type="date" id="dob"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="dbError">Select The Date of Birth</span>
+              </div>
+
+              <!-- Gender -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Gender</label>
+                <select id="gender" class="w-full border p-2 rounded">
+                  <option value="">Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+              </select>
+              <span class="text-red-500 text-sm hidden" id="GenderError">Select The Gender</span>
+              </div>
+
+              <!-- City -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">City</label>
+                <input type="text" id="city"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="cityError">City is required</span>
+              </div>
+
+              <!-- State -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">State</label>
+                <input type="text" id="state"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="stateError">State is required</span>
+              </div>
+
+              <!-- Country -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Country</label>
+                <input type="text" id="country"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="countryError">Country is required</span>
+              </div>
+
+              <!-- Address -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Address</label>
+                <input type="text" id="address"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="addressError">Address is required</span>
+              </div>
+
+              <!-- Message -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Message</label>
+                <input type="text" id="message"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="messageError">Message is required</span>
+              </div>
+            </div>
+            <div class="flex flex-row justify-between">
+              <!-- Counseling Radio Buttons -->
+              <div class="flex flex-col items-start">
+                <span class="text-gray-700 font-medium">Request a Counseling session?</span>
+                <div class="flex flex-row gap-4" >
+                  <label class="flex  items-center space-x-2">
+                    <input type="radio" name="counseling" class="text-purple-600" id="counselingYes">
+                    <span>Yes</span>
+                  </label>
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="counseling" class="text-purple-600" id="counselingNo">
+                    <span>No</span>
+                  </label>
+                  <span class="text-red-500 text-sm hidden" id="counselingError"> Select counseling session </span>
+                </div>
+              </div>
+
+              <!-- Upload CV -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Upload your CV/Resume</label>
+                <input type="file" id="cv"
+                  class="mt-1 border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600">
+                  <span class="text-red-500 text-sm hidden" id="cvError">Please upload a PDF or DOCX</span>
+              </div>
+
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="flex items-center space-x-2">
+              <input type="checkbox" id="terms" class="text-purple-600">
+              <label for="terms" class="text-gray-700">Agree to terms and conditions</label>
+              <span class="text-red-500 text-sm hidden" id="termsError">Please allow terms and conditions</span>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="w-1/2 bg-[#00B4FC] text-white p-3  hover:bg-blue-700 font-semibold">
+              Submit Information
+            </button>
+          </form>
+          <p id="successMessage" class="text-green-600 text-lg mt-4 hidden">Form submitted successfully!</p>
+        </div>
+      </div>
+
+
+      <!--Map-->
+      <div class="bg-white flex items-center justify-center min-h-screen p-4 mt-12 ">
+
+        <div class="w-full max-w-2xl ">
+
+          <!-- Map Image -->
+          <div class="w-full aspect-video">
+            <img src="/asset/image 19.png" alt="Map Location" class="w-full h-full object-cover">
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="p-6">
+            <h2 class="text-sm font-semibold text-center">Do you have any question</h2>
+            <p class="text-gray-600 text-xs text-center mt-2 mb-14">Our support team is ready to help you, please
+              contact with them</p>
+
+            <ul class="mt-4 space-y-4">
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '//asset/minus.png' : '//asset/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">App installation failed, how to update system information?</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fuga voluptatibus adipisci at cupiditate eius natus deleniti culpa debitis nihil, amet nulla esse mollitia, libero tenetur unde! Rerum, pariatur magnam!
+                  </p>
+                </div>
+              </li>
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '//asset/minus.png' : '//asset/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">Website response taking time, how to improve?</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests delivered at
+                    the home collect a sample from management news. Get your blood tests delivered at the home.
+                  </p>
+                </div>
+              </li>
+
+
+
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '//asset/minus.png' : '//asset/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">New update fixed all bug and issues</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa aliquid ratione! Consequuntur consequatur enim maiores officiis accusamus provident blanditiis eos explicabo velit non repellendus eum quam, ducimus autem similique.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe section -->
+
+
+        </div>
+
+
+
+
+      </div>
+      <section class="mt-12 bg-pink-100 p-8 rounded-lg max-w-4xl h-80 mx-auto text-center">
+        <div class="flex flex-col items-start justify-center w-full max-w-md mx-auto">
+            <img src="/asset/Group (1).png" class="w-15 h-10"/>
+            <h1 class="text-4xl font-bold mt-2 text-start">Stay informed with our weekly newsletter.</h1>
+            
+            <div class="flex items-center mt-4 space-x-2 w-full">
+                <input type="email" placeholder="Enter Your Email" class="px-4 py-2 border rounded-lg w-2/3">
+                <button class="px-6 py-2 bg-blue-600 text-[0.71rem] text-white hover:bg-blue-600 transition">
+                    Get a Consultation
+                </button>
+            </div>
+        
+            <p class="text-xs text-gray-600 mt-2 flex gap-2 ">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_166)">
+                    <path d="M6.99999 12.8337C10.2217 12.8337 12.8333 10.222 12.8333 7.00033C12.8333 3.77866 10.2217 1.16699 6.99999 1.16699C3.77833 1.16699 1.16666 3.77866 1.16666 7.00033C1.16666 10.222 3.77833 12.8337 6.99999 12.8337Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 9.33333V7" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 4.66699H7.00625" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_3_166">
+                    <rect width="14" height="14" rx="7" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+                    
+                By sending the form you agree to the Terms & Conditions and Privacy Policy.</p>
+        </div>
+    </section>
+      
+<!-- Footer Section -->
+<footer class="text-black  py-8 bg-cover bg-center bg-no-repeat" style="background-image: url('/asset/decoration-2\ 2.png');">
+        <div class="container mx-auto px-4">
+          <!-- First Section: Content, Links -->
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <!-- First Div: Heading and Button -->
+            <div class="mb-4 md:mb-0 md:w-1/3">
+              <h1 class="text-2xl font-bold mb-4 leading-[58px] md:text-[46px] sm:text-[40px]">
+                Ready to get started <br />with Stratifyx?
+              </h1>
+              <button class="round fill bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Get a Consultation
+              </button>
+            </div>
+      
+            <!-- Second Div: About, Services, Portfolio, Blog -->
+            <div class="mt-4 md:mt-0 md:w-1/3">
+              <ul class="flex flex-col sm:flex-row gap-3.5 md:flex-col items-start md:items-center">
+                <li><a href="#"><p class="size-textlg">About Us</p></a></li>
+                <li><a href="Services" target="_blank" rel="noopener noreferrer"><p class="size-textlg">Services</p></a></li>
+                <li><a href="Portfolio" target="_blank" rel="noopener noreferrer"><p class="size-textlg">Portfolio</p></a></li>
+                <li><a href="Blog" target="_blank" rel="noopener noreferrer"><p class="size-textlg">Blog</p></a></li>
+                <li><a href="Portfolio" target="_blank" rel="noopener noreferrer"><p class="size-textlg">Portfolio</p></a></li>
+              </ul>
+            </div>
+      
+            <!-- Third Div: Privacy, Terms, Press, Jobs -->
+            <div class="mt-4 md:mt-0 md:w-1/3">
+              <ul class="flex flex-col sm:flex-row gap-3.5 md:flex-col items-start md:items-center">
+                <li><a href="#"><p class="size-textlg">Privacy Policy</p></a></li>
+                <li><a href="#"><p class="size-textlg">Terms & Conditions</p></a></li>
+                <li><a href="#"><p class="size-textlg">Press Release</p></a></li>
+                <li><a href="#"><p class="size-textlg">Jobs & Internships</p></a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Second Section: Copyright and Social Media -->
+          <div class="flex justify-between items-center mt-8">
+            <!-- Copyright -->
+            <p class="size-textlg text-gray-500">
+              &copy; Stratifyx - All Rights Reserved. 2024
+            </p>
+      
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4">
+              <img src="/asset/facebook.png" alt="Facebook" class="h-[24px]" />
+              <img src="/asset/instagram.png" alt="Instagram" class="h-[24px]" />
+              <img src="/asset/Vector.png" alt="Twitter" class="h-[24px]" />
+              <img src="/asset/linkedin.png" alt="Linkedin" class="h-[24px]" />
+              <img src="/asset/youtube.png" alt="Youtube" class="h-[24px]" />
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
